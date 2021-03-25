@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golpea al cuadrado</title>
+    <link rel="icon" href="img/faviconcuadrado.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="seccionNombres">
+    <h1>Ingrese el nombre de los jugadores</h1>
+    <form action="" id="nombresJugadores">
+      <input type="text" placeholder="Nombre jugador 1" class="formNombres" id="nombreJugadorUno">
+      <input type="text" placeholder="Nombre jugador 2" class="formNombres" id="nombreJugadorDos">
+     <div class="botonera" onclick="comenzarJuego()"><h3>Empezar juego</h3></div>
+    </form>
+  </div>   
+  <div id="mostrandoJugadores"></div>  
+
+    <div id="pantallaInicial">
+       
+        <div id="comenzar" class="botonera" onclick="nombreDeJugadores()"><h4>Comenzar</h4></div>
+        
+      
+         <div id="botonIntro" class="botonera" onclick="instrucciones()"><h4>Instrucciones</h4></div>
+         <div id="intros">
+            <h3>Bienvenido a golpea el cuadrado!</h3>
+            <p>
+                "Golpea al cuadrado" es un juego pensado para dos jugadores, cuyo objetivo es lograr la mayor cantidad de puntos que su adversario. 
+            </p>    
+              <p>
+                ¿Como se logra esto? Los puntos se suman golpeando el cuadrado en pantalla.
+              </p>   
+            <p>
+                Las rondas tienen un duracion de 10 segundos. Al final de la partida, el juego dira quien es el ganador.
+            </p>
+        </div>   
+       
+    </div>
+    
+    <div id="seccionJuego">
+      <div id="pantallaDeJuego">
+         
+         <div id="contenedor">
+          
+             <div id="anuncios">
+                  <div id="puntos">Puntos:</div>
+                  <div id="tableroPuntuacion"></div>
+                  <div id="comentarios"></div>
+                  <div id="numeroJugador">
+                  <div id="temporizador"></div>
+                  <button id="jugador1" onclick="iniciar(1)">JUGADOR 1</button>
+                  <button id="jugador2" onclick="iniciar(2)" >JUGADOR 2</button>
+                
+              </div>   
+        </div>
+            
+        
+            <div id="juego">
+              <div class="cuadrado" id="cuadrado" onclick="sumarPuntos()"></div>
+            </div>
+       </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
